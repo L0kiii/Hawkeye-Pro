@@ -7,9 +7,9 @@ import requests
 import json
 import random
 
-burp_url = 'http://ip:8002/api/setting/query'
+burp_url = 'http://ip:port/api/setting/query'
 burp_header = {
-    'Host': 'ip:8002',
+    'Host': 'ip:port',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.28 Safari/537.36 OPR/61.0.3298.6 (Edition developer)',
     'Accept': 'application/json, text/plain, */*',
     'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
