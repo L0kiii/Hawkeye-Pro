@@ -19,6 +19,18 @@ burp_header = {
 
 namesDict = {}
 with open(file="urls.txt", mode="r", encoding="utf-8") as f:
+    n=0
+    for line in f.readlines():
+        n=n+1
+        line = line.strip()
+        if line.startswith("###"):
+            value = line[4:]
+        else:
+            namesDict[line] = value + str(n)
+
+"""
+随机命名
+with open(file="urls.txt", mode="r", encoding="utf-8") as f:
     for line in f.readlines():
         line = line.strip()
         if line.startswith("###"):
@@ -26,17 +38,6 @@ with open(file="urls.txt", mode="r", encoding="utf-8") as f:
         else:
             namesDict[line] = value + str(random.randint(0, 9))
 
-"""
-顺序命名
-with open(file="urls.txt", mode="r", encoding="utf-8") as f:
-    n=0
-    for line in f.readlines():
-        n=n+1
-        line = line.strip()
-        if line.startswith("###"):
-            value = line[4:] + str(n)
-        else:
-            namesDict[line] = value + str(n)
 """
 
 

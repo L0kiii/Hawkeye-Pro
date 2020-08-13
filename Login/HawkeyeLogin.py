@@ -35,10 +35,15 @@ def sent_data():
         p = passWord[i]
         data = {"username": u, "password": p}
         burp_data = json.dumps(data)
-        print(burp_data)
-        response = requests.post(url=burp_url, headers=burp_header, data=burp_data)
-        if response:
-            print("[+]Add Token Success!")
+
+        try:
+            response = requests.post(url=burp_url, headers=burp_header, data=burp_data)
+            if response:
+                print(burp_data)
+                print("[+]Add Token Success!")
+            response.close()
+        except EOFError:
+            print("[*]Time Out!")
 
 
 if __name__ == '__main__':
