@@ -1,25 +1,18 @@
 # Hawkeye-Pro
-Github敏感信息收集面板 支持批处理
+Github Sensitive Information Collection Panel Supports Batch Processing
 
-`@author:L0ki`
+## Usage Instructions
 
-`@blog:https://l0ki.top`
+Supports identification of markdown titles for task names
 
+Currently, rules are only for URLs. Refer to `https://github.com/L0kiii/Github-Monitor-Pro` for rule additions
 
+For server considerations, set all tasks to False to disable them. To start immediately, change `{.... 'enable':False}` to `True` in the code
 
-## 用法须知
-
-支持识别markdown标题 用于任务名称
-
-规则目前仅为url 需要添加规则参考`https://github.com/L0kiii/Github-Monitor-Pro`
-
-基于服务器考虑 把任务都设为False 即为❎关闭按钮 如需立即启动 更改代码中`{.... 'enable':False}`为`True`
-
-使用前需要添加账户密码
+Before use, add account credentials
 
 ```python
 python3 Hawkeye.py
 python3 HawkeyePro.py
 python3 HawkeyeLogin.py
 ```
-
